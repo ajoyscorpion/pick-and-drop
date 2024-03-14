@@ -1,0 +1,57 @@
+.card{
+    width: 400px;
+    height: auto;
+    border-radius: 30px;
+    border: solid rgb(0, 0, 0);
+    border-width: 2px;
+}
+
+.cardbody{
+    border-radius: 30px;
+}
+
+.bike{
+    width: 60px;
+    height: 60px;
+}
+
+.truck{
+    width: 60px;
+    height: 60px;
+}
+
+.home{
+    width: 60px;
+    height: 60px;
+}
+
+.row{
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.btn{
+    width: 100px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.map{
+    width: 600px;
+    height: 400px;
+    
+}
+
+.mapContainer{
+    position: relative;
+    z-index: 1;
+}
+
+.arrow{
+    width: 50px;
+    height: 25px;
+}
+
+.payment{
+  
+}
