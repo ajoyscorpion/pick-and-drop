@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
 import styles from "../ride/page.module.css"
-import bike from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/Images/bike.jpg"
-import home from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/Images/home.jpg"
-import truck from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/Images/truck.jpg"
+import bike from "../Images/bike.jpg"
+import home from "../Images/home.jpg"
+import truck from "../Images/truck.jpg"
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { DirectionsRenderer, GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import { userLocationContext } from "../../../context/userLocationContext";

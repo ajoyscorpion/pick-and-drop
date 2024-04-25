@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
-import logo from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/Images/pick-n-drop-high-resolution-logo-white-transparent.png"
+import logo from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/app/Images/pick-n-drop-high-resolution-logo-white-transparent.png"
 import styles from "../navbar/navbar.module.css"
-import userIcon from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/Images/User.png"
+import userIcon from "/Users/ajoy/NextJs/Pick and Drop/pick-and-drop/src/app/Images/User.png"
 import Link from "next/link";
 import { useContext } from "react";
 import { authContext } from "../../../context/authContext";
