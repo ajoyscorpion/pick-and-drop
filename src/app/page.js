@@ -68,7 +68,7 @@ export default function Home() {
             className={`${styles.btn} btn border-dark mt-3 d-flex justify-content-around align-items-center`}
           >
             <h5 className="mt-1"><strong>Enter the <span>Pla</span><span>ces</span></strong></h5>
-            <Image src={arrow} className={`${styles.arrow}`}/>
+            <Image src={arrow} alt='arrow' className={`${styles.arrow}`}/>
           </div>  
         </div>
         <div className="col-lg-2"></div>

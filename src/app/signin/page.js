@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import React, { useContext, useEffect, useState } from 'react'
 import { authContext } from '../../../context/authContext'
 import { signIn } from '../../../services/allAPIs'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signin() {
 
@@ -42,48 +44,53 @@ function Signin() {
             localStorage.setItem('user',user)
             //setToken(token)
             //setUser(user)
+            toast(`You have successfully signed in ${user}`,{ theme: "dark" })
             window.location.reload()
             window.location.href = "/";
             //router.push("/")
         } catch (error) {
-           console.log("Enter Valid Credentials"); 
+            toast(`Enter Valid Credentials`,{ theme: "dark" })
+            console.log("Enter Valid Credentials"); 
         }
     }
 
   return (
-    <div className={`${styles.signInContainer} row`}>
-        <div className='col-lg-4 col-4'></div>
-        <div className='col-lg-4 col-4 d-flex flex-column justify-content-center align-items-center'>
-            <h3>Sign In</h3>
-            <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center mt-3">
-                <div class="mb-3">
-                    <label for="Email" class="form-label">Email address</label>
-                    <input 
-                        type="email" 
-                        class="form-control" 
-                        id="Email" 
-                        value={email} 
-                        required 
-                        onChange={(e) => setEmail(e.target.value)}
+    <>
+        <div className={`${styles.signInContainer} row`}>
+            <div className='col-lg-4 col-4'></div>
+            <div className='col-lg-4 col-4 d-flex flex-column justify-content-center align-items-center'>
+                <h3>Sign In</h3>
+                <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center mt-3">
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email address</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="Email" 
+                            value={email} 
+                            required 
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
+                    </div>
+                    <div class="mb-3">
+                        <label for="pswd" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="pswd" 
+                            value={pswd} 
+                            required
+                            onChange={(e) => setPswd(e.target.value)}
                         />
-                </div>
-                <div class="mb-3">
-                    <label for="pswd" class="form-label">Password</label>
-                    <input 
-                        type="password" 
-                        class="form-control" 
-                        id="pswd" 
-                        value={pswd} 
-                        required
-                        onChange={(e) => setPswd(e.target.value)}
-                    />
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <p className='mt-5'><strong>Dont have an Account ? Please <Link href="/signup"><span className={styles.signupLink}>Sign Up</span></Link></strong></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <p className='mt-5'><strong>Dont have an Account ? Please <Link href="/signup"><span className={styles.signupLink}>Sign Up</span></Link></strong></p>
+            </div>
+            <div className='col-lg-4 col-4'></div>
         </div>
-        <div className='col-lg-4 col-4'></div>
-    </div>
+        <ToastContainer />
+    </>
   )
 }
 

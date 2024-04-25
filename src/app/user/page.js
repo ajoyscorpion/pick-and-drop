@@ -63,6 +63,7 @@ function User() {
             toast("Updated Name Successfully", { theme: "dark" });
             viewUserDetails(token)    
         } catch (error) {
+            toast("Failed to Update Name", { theme: "dark" });
             console.log("Failed to Update Name");    
         }
     }
@@ -82,7 +83,8 @@ function User() {
             toast("Updated Phone Successfully", { theme: "dark" });
             viewUserDetails(token)    
         } catch (error) {
-            console.log("Failed to Update Name");    
+            toast("Failed to Update Phone", { theme: "dark" });
+            console.log("Failed to Update Phone");    
         }
     }
 
@@ -117,6 +119,7 @@ function User() {
             toast("The Ride has been Cancelled", { theme: "dark" });
             viewUserDetails(token)
         } catch (error) {
+            toast("Failed to cancel the Ride", { theme: "dark" });
             console.log("Ride Cancelled error");
         }
     }
@@ -135,6 +138,7 @@ function User() {
             toast("The Rehome has been Cancelled", { theme: "dark" });
             viewUserDetails(token)
         } catch (error) {
+            toast("Failed to cancel the Rehome", { theme: "dark" });
             console.log("Rehome cancelled error");
         }
     }
@@ -162,6 +166,7 @@ function User() {
             toast("Updated Rehome successfully", { theme: "dark" });
             viewUserDetails(token)
         } catch (error) {
+            toast("Failed to update Rehome", { theme: "dark" });
             console.log("error");
         }
     }

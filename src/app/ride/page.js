@@ -187,6 +187,7 @@ function Ride() {
       }
       
     }catch (error){
+      toast("Error in payment", { theme: "dark" });
       console.error("Error:", error);
     }
   }
