@@ -8,6 +8,8 @@ import styles from "./page.module.css";
 import calculateDistance from "../app/ride/page" 
 import { authContext } from "../../context/authContext";
 import { useRouter } from 'next/navigation';
+import arrow from "./Images/arrow 2.png"
+import Image from "next/image";
 
 
 export default function Home() {
@@ -66,7 +68,7 @@ export default function Home() {
             className={`${styles.btn} btn border-dark mt-3 d-flex justify-content-around align-items-center`}
           >
             <h5 className="mt-1"><strong>Enter the <span>Pla</span><span>ces</span></strong></h5>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
+            <Image src={arrow} className={`${styles.arrow}`}/>
           </div>  
         </div>
         <div className="col-lg-2"></div>
