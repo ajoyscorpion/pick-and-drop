@@ -60,7 +60,25 @@ function PlaceComponent({type}) {
             apiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}
             selectProps={{
               value,
-              onChange: (place) => {getLatandLng(place,type);setValue(place)},
+              onChange: (place) => {
+                if(!place){
+                  setValue(null);
+                  setPlaceHolder('');
+                  if(type == source){
+                    //setSource(null)
+                    setValue(null);
+                    setPlaceHolder('');
+                  } else if (type == destination){
+                    // setDestination(null)
+                    setValue(null);
+                    setPlaceHolder('');
+                  }
+                }else{
+                  getLatandLng(place,type);
+                  setValue(place);
+                }
+              },
+              // onChange: (place) => {getLatandLng(place,type);setValue(place)},
               isClearable:true,
               className:"",
               placeholder:placeholder,

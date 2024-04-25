@@ -6,61 +6,70 @@ import { destinationContext } from "../../context/destinationContext";
 import { sourceContext } from "../../context/sourceContext";
 import styles from "./page.module.css";
 import calculateDistance from "../app/ride/page" 
+import { authContext } from "../../context/authContext";
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
 
   const {source,setSource} = useContext(sourceContext)
   const {destination,setDestination} = useContext(destinationContext)
   const [isConfirmed, setIsConfirmed] = useState(false);
+  //const {token,isAuthenticated} = useContext(authContext)
+  const router = useRouter();
 
   useEffect(() => {
-    if (source && destination) {
-      setIsConfirmed(true);
-    } else {
-      setIsConfirmed(false);
-    }
+    
   }, [source, destination]);
+
+  const token = localStorage.getItem("token")
+
+
+  // const clickedConfirm = () => {
+  //   if (token){
+  //     console.log("rediredct to ride");
+  //     router.push("/ride")
+  //   } else{
+  //     console.log("Please sign In");
+  //     router.push("/signin")
+  //   }
+  // }
+
+  const clickedConfirm = () => {
+    if (token) {
+      console.log("Redirecting to ride page...");
+      router.push("/ride");
+    } else {
+      console.log("Please sign in to continue...");
+      router.push("/signin");
+    }
+  };
+
+
 
   return (
     <>
       <div className={`${styles.row} row`}>
         <div className="col-lg-2"></div>
-        <div className="col-lg-4 d-flex flex-column align-items-center justify content-center" style={{marginTop:"100px"}}>
+        <div className="col-lg-4 col-12 d-flex flex-column align-items-center justify content-center" style={{marginTop:"130px"}}>
           <h1 className={`${styles.pickn}`}>
             Pick <span className="" style={{color:"#FFD600"}}>'n</span>
           </h1>
-          <h1 className={`${styles.drop}`} style={{marginRight:"110px"}}>
+          <h1 className={`${styles.drop} ms-4 ms-lg-1`} style={{marginRight:"110px"}}>
             <span style={{color:"#FFD600"}}>Dr</span>op
           </h1>
         </div>
-        <div className="col-lg-5 d-flex flex-column justify-content-center">
-          <form className="d-flex flex-column align-items-center justify-content-center">
-            <h6 className="me-5">Pick Up Location</h6>
-            <div className="col-lg-6 mb-3 d-flex align-items-center">
-              <i class="fa-regular fa-circle-dot"></i>
-              <div className="col-lg-12 ms-3">
-                <PlaceComponent type="source" required></PlaceComponent>
-              </div>
-            </div>
-            <h6 className="me-5">Drop Off Location</h6>
-            <div className="col-lg-6 mb-3 d-flex align-items-center">
-              <i class="fa-solid fa-location-dot"></i>
-              <div className="col-lg-12 ms-3">
-                <PlaceComponent type="destination" required></PlaceComponent>
-              </div>
-            </div>
-            <Link href={isConfirmed ? "/ride" : "#"}>
-              <button
-                type="button"
-                className={`${styles.btn} btn border-dark mt-3 ms-5`}
-                disabled={!isConfirmed}
-              >
-                Confirm
-              </button>
-            </Link>
-          </form>
+        <div className="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+          <div 
+            type='button'
+            onClick={clickedConfirm}
+            className={`${styles.btn} btn border-dark mt-3 d-flex justify-content-around align-items-center`}
+          >
+            <h5 className="mt-1"><strong>Enter the <span>Pla</span><span>ces</span></strong></h5>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </div>  
         </div>
-        <div className="col-lg-1"></div>
+        <div className="col-lg-2"></div>
       </div>
     </>
   );
@@ -138,3 +147,32 @@ export default function Home() {
 //     </>
 //   );
 // }
+
+
+{/* <form className="d-flex flex-column align-items-center justify-content-center">
+            <h6 className="me-5"><strong>Pick Up Location</strong></h6>
+            <div className="col-lg-6 mb-3 d-flex align-items-center">
+              <i class="fa-regular fa-circle-dot"></i>
+              <div className="col-lg-12 ms-3">
+                <PlaceComponent type="source" required></PlaceComponent>
+              </div>
+            </div>
+            <h6 className="me-5"><strong>Drop Off Location</strong></h6>
+            <div className="col-lg-6 mb-3 d-flex align-items-center">
+              <i class="fa-solid fa-location-dot"></i>
+              <div className="col-lg-12 ms-3">
+                <PlaceComponent type="destination" required></PlaceComponent>
+              </div>
+            </div>
+
+              <div 
+                type='button'
+                onClick={clickedConfirm}
+                className={`${styles.btn} btn border-dark mt-3 ms-5 d-flex justify-content-evenly align-items-center`}
+              >
+                  <h5 className="mt-1"><strong>Enter the Places</strong></h5>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+              </div>
+            
+              
+          </form> */}

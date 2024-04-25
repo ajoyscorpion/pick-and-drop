@@ -6,9 +6,9 @@
   background-attachment: fixed; */
 }
 body{
-  background-image: url("../Images/Home.png");
+  /* background-image: url("../Images/Home.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   height: auto;
   width: auto;
 }

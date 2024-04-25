@@ -52,6 +52,49 @@
     height: 25px;
 }
 
-.payment{
-  
+
+
+@media only screen and (max-width: 670px) {
+    .card{
+        width: 350px;
+        height: auto;
+        border-radius: 30px;
+        border: solid rgb(0, 0, 0);
+        border-width: 2px;
+    }
+
+    .mapContainer{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .card{
+        width: 300px;
+        height: auto;
+        border-radius: 30px;
+        border: solid rgb(0, 0, 0);
+        border-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .card{
+        width: 250px;
+        height: auto;
+        border-radius: 30px;
+        border: solid rgb(0, 0, 0);
+        border-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .card{
+        width: 200px;
+        height: auto;
+        border-radius: 30px;
+        border: solid rgb(0, 0, 0);
+        border-width: 2px;
+    }
 }
