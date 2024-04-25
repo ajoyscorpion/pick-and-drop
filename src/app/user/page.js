@@ -4,13 +4,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import styles from '../user/page.module.css'
 import editIcon3 from '../Images/editIcon3.png'
 import bike from "../Images/bike.jpg"
-import DatePickerComponent from '@/components/datePicker/datePicker'
+import DatePickerComponent from '@/app/components/datePicker/datePicker'
 import { rehomeCancel, rideCancel, updateEmail, updateName, updatePhone, updateRehome, userInfo } from '../../../services/allAPIs'
 import truck from "../Images/truck.jpg"
 import { authContext } from '../../../context/authContext'
 import home from "../Images/home.jpg"
 import { dateTimeContext } from '../../../context/dateTimeContext'
-import AuthRoute from '@/components/authRoute/authRoute'
+import AuthRoute from '@/app/components/authRoute/authRoute'
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

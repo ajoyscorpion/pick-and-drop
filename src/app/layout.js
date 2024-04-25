@@ -2,8 +2,8 @@
 import { Inter } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
+import Navbar from "@/app/components/navbar/navbar";
+import Footer from "@/app/components/footer/footer";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { userLocationContext } from "../../context/userLocationContext";

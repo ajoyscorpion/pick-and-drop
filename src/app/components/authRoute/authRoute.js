@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useContext } from "react";
-import { authContext } from "../../../context/authContext";
+import { authContext } from "../../../../context/authContext";
 
 function AuthRoute({ children }) {
     const router = useRouter(); // Call `useRouter()` to get the router instance

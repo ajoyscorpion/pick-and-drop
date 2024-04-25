@@ -1,5 +1,5 @@
 "use client"
-import PlaceComponent from "@/components/place/placeComponent";
+import PlaceComponent from "@/app/components/place/placeComponent";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { destinationContext } from "../../context/destinationContext";

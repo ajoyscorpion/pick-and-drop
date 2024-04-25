@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { dateTimeContext } from '../../../context/dateTimeContext';
+import { dateTimeContext } from '../../../../context/dateTimeContext';
 
 function DatePickerComponent({selectedDateTime}) {
 

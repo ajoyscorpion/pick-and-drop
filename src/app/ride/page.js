@@ -7,18 +7,18 @@ import truck from "../Images/truck.jpg"
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { DirectionsRenderer, GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import { userLocationContext } from "../../../context/userLocationContext";
-import PlaceAutocomplete from "@/components/place/placeComponent";
+import PlaceAutocomplete from "@/app/components/place/placeComponent";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
-import PlaceComponent from "@/components/place/placeComponent";
+import PlaceComponent from "@/app/components/place/placeComponent";
 import { sourceContext } from "../../../context/sourceContext";
 import { destinationContext } from "../../../context/destinationContext";
 import { dateTimeContext } from "../../../context/dateTimeContext";
-import DatePickerComponent from "@/components/datePicker/datePicker";
+import DatePickerComponent from "@/app/components/datePicker/datePicker";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addRide, newRehome, newRide } from "../../../services/allAPIs";
 import { authContext } from "../../../context/authContext";
-import AuthRoute from "@/components/authRoute/authRoute";
+import AuthRoute from "@/app/components/authRoute/authRoute";
 import GooglePayButton from "@google-pay/button-react"
 
 function Ride() {

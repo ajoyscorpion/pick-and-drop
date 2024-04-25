@@ -2,9 +2,9 @@
 import React, { useContext, useEffect } from 'react'
 import { useState } from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
-import { destinationContext } from '../../../context/destinationContext';
-import { sourceContext } from '../../../context/sourceContext';
-import styles from "../place/placeComponent.css";
+import { destinationContext } from '../../../../context/destinationContext';
+import { sourceContext } from '../../../../context/sourceContext';
+import styles from "./placeComponent.css";
 
 
 function PlaceComponent({type}) {
