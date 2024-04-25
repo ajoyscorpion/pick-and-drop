@@ -16,7 +16,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function user() {
+function User() {
 
     const [userDetails,setUserDetails] = useState("")
     //const [newEmail,setNewEmail] = useState("")
@@ -44,7 +44,7 @@ function user() {
     useEffect(() => {
         viewUserDetails(token)
         setIsAccountDetailsClicked(true)
-    },[])
+    },[token])
 
     
 
@@ -196,7 +196,7 @@ function user() {
                                 <div className={`d-flex justify-content-between ${styles.accountDetails}`}>
                                     <p>{userDetails.name}</p>
                                     <p type="button" data-bs-toggle="modal" data-bs-target="#nameUpdate" className={`${styles.link}`}>
-                                        <Image src={editIcon3} className={`${styles.editIcon3}`}/>
+                                        <Image src={editIcon3} alt="edit Icon" className={`${styles.editIcon3}`}/>
                                     </p>
                                 </div>
                                 
@@ -204,7 +204,7 @@ function user() {
                                 <div className={`d-flex justify-content-between ${styles.accountDetails}`}>
                                     <p>{userDetails.phone}</p>
                                     <p type="button" data-bs-toggle="modal" data-bs-target="#phoneUpdate" className={`${styles.link}`}>
-                                        <Image src={editIcon3} className={`${styles.editIcon3}`}/>
+                                        <Image src={editIcon3} alt="edit Icon" className={`${styles.editIcon3}`}/>
                                     </p>
                                 </div>
                                 
@@ -223,13 +223,13 @@ function user() {
                 {isTripDetailsClicked && (
                     <>
                         <h3 className='ms-lg-3 ms-3 mt-3'>Trip Details</h3>
-                        {userDetails.rides.map((ride) => (
-                            <div className='row border rounded-4 ms-lg-3 ms-3 me-3 mt-4 mb-4'>
+                        {userDetails.rides.map((ride,index) => (
+                            <div key={index} className='row border rounded-4 ms-lg-3 ms-3 me-3 mt-4 mb-4'>
                                 <div className='col-lg-2 col-2 d-flex justify-content-center align-items-center'>
                                     {ride.typeOfRide === "Bike" ? (
-                                            <Image src={bike} className={`${styles.bike}`}/>  
+                                            <Image src={bike} alt="bike icon" className={`${styles.bike}`}/>  
                                         ) : (
-                                            <Image src={truck} className={`${styles.truck}`}/>
+                                            <Image src={truck} alt="truck icon" className={`${styles.truck}`}/>
                                         )
                                     }
                                 </div>
@@ -276,10 +276,10 @@ function user() {
                 {isRehomeDetailsClicked && (
                     <>
                         <h3 className='ms-lg-3 ms-3 mt-3'>Re Home Details</h3>
-                        { userDetails.rehome.map((rehome)=> (
-                            <div className='row border rounded-4 ms-lg-3 ms-3 me-3 mt-4 mb-4'>
+                        { userDetails.rehome.map((rehome,index)=> (
+                            <div key={index} className='row border rounded-4 ms-lg-3 ms-3 me-3 mt-4 mb-4'>
                                 <div className='col-lg-2 col-2 d-flex justify-content-center align-items-center'>
-                                    <Image src={home} className={`${styles.home}`}/>  
+                                    <Image src={home} alt="home Icon" className={`${styles.home}`}/>  
                                 </div>
                                 <div className='col-lg-4 col-4 mt-4'>
                                     <div className=''>
@@ -407,6 +407,6 @@ function user() {
   )
 }
 
-export default user
+export default User
 
 

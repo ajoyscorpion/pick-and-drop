@@ -5,7 +5,7 @@ import { signUp } from '../../../services/allAPIs'
 import styles from '../signup/page.module.css'
 
 
-function signup() {
+function Signup() {
 
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
@@ -39,44 +39,44 @@ function signup() {
         <div className='col-lg-6 col-6 d-flex flex-column align-items-center justify-content-center'>
             <h3>Sign Up</h3>
             <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center mt-3">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
+                <div className="mb-3">
+                    <label for="name" className="form-label">Name</label>
                     <input 
                         type="text" 
-                        class="form-control" 
+                        className="form-control" 
                         id="name"
                         value={name}
                         required
                         onChange={(e) => setName(e.target.value)}
                         />
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                <div className="mb-3">
+                    <label for="email" className="form-label">Email address</label>
                     <input 
                         type="email" 
-                        class="form-control" 
+                        className="form-control" 
                         id="email"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         />
                 </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone</label>
+                <div className="mb-3">
+                    <label for="phone" className="form-label">Phone</label>
                     <input 
                         type="tel" 
-                        class="form-control" 
+                        className="form-control" 
                         id="phone"
                         required
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         />
                 </div>
-                <div class="mb-3">
-                    <label for="pswd" class="form-label">Password</label>
+                <div className="mb-3">
+                    <label for="pswd" className="form-label">Password</label>
                     <input 
                         type="password" 
-                        class="form-control" 
+                        className="form-control" 
                         id="pswd"
                         required
                         value={pswd}
@@ -91,4 +91,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup

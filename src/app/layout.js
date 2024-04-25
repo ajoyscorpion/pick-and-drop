@@ -13,6 +13,8 @@ import { LoadScript } from "@react-google-maps/api";
 import { DistanceProvider } from "../../context/distanceContext";
 import { dateTimeContext } from "../../context/dateTimeContext";
 import { authContext } from "../../context/authContext";
+//import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -110,8 +112,8 @@ export default function RootLayout({ children }) {
           <Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossOrigin="anonymous"/>
           <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
           <Link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerpolicy="no-referrer" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+          <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+          <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         </head>
         <body className={inter.className}>
             <LoadScript libraries={['places']} googleMapsApiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
@@ -130,8 +132,8 @@ export default function RootLayout({ children }) {
               </authContext.Provider>
             </LoadScript>
         </body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></Script>
+        <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
     </html>
   );
 }

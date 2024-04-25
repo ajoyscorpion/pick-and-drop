@@ -21,7 +21,7 @@ import { authContext } from "../../../context/authContext";
 import AuthRoute from "@/components/authRoute/authRoute";
 import GooglePayButton from "@google-pay/button-react"
 
-function ride() {
+function Ride() {
 
   const [value, setValue] = useState(null);
   const {userLocation,setUserLocation}=useContext(userLocationContext)
@@ -90,7 +90,7 @@ function ride() {
       directionRoute()
       calculateDistance()
     }
-  }, [source, userLocation]);
+  }, [source, destination, userLocation]);
 
   useEffect(() => {
     if (destination && destination.lat && destination.lng) {
@@ -101,7 +101,7 @@ function ride() {
       calculateDistance()
       setAmount(true)
     }
-  }, [destination]);
+  }, [source, destination]);
 
 
    const calculateDistance = () => {
@@ -118,7 +118,7 @@ function ride() {
 
 
 
-  const directionRoute=()=>{
+  const directionRoute= ()=>{
     const DirectionService = new google.maps.DirectionsService();
     DirectionService.route({
       origin:{lat:source.lat,lng:source.lng},
@@ -301,7 +301,7 @@ function ride() {
                       <div className={`${styles.cardbody} card-body`}>
                         <div className="row">
                           <div className="col-lg-3 d-flex align-items-center justify-content-center">
-                            <Image src={bike} className={`${styles.bike}`}/>
+                            <Image src={bike} alt="BikeIcon" className={`${styles.bike}`}/>
                           </div>
                           <div className="col-lg-6">
                             <h5 className="d-flex align-items-center justify-content-center">Bike</h5>
@@ -384,7 +384,7 @@ function ride() {
                         <div className={`${styles.cardbody} card-body`}>
                           <div className="row">
                             <div className="col-lg-3 d-flex align-items-center justify-content-center">
-                              <Image src={truck} className={`${styles.truck}`}/>
+                              <Image src={truck} alt="truckIcon" className={`${styles.truck}`}/>
                             </div>
                             <div className="col-lg-6">
                               <h5 className="d-flex align-items-center justify-content-center">Pick Up</h5>
@@ -468,7 +468,7 @@ function ride() {
                       <div className={`${styles.card} card`} type="button" onClick={reHomePayment} data-bs-toggle="modal" data-bs-target="#rehomeCalender">
                         <div className={`${styles.cardbody} card-body`}>
                           <div className=" d-flex flex-column align-items-center justify-content-center">
-                            <Image src={home} className={`${styles.home}`}/>
+                            <Image src={home} alt='homeIcon' className={`${styles.home}`}/>
                             <h5 className="d-flex align-items-center justify-content-center">ReHome</h5>
                           </div>
                           {/* { isReHomeClicked && (
@@ -529,7 +529,7 @@ function ride() {
   )
 }
 
-export default ride;
+export default Ride;
 
 
 

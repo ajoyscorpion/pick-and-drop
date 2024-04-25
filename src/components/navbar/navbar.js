@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
         <div className="col-lg-1 col-1 d-flex flex-column align-items-center justify-content-center">
             <Link style={{textDecoration:"none", color:"white"}} href="/user">
-                <Image src={userIcon} className={styles.user}/>
+                <Image src={userIcon} alt="userIcon" className={styles.user}/>
             </Link>
             { token && (
                 <p className=""><strong>{user}</strong></p>

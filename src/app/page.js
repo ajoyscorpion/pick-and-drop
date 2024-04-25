@@ -53,7 +53,7 @@ export default function Home() {
         <div className="col-lg-2"></div>
         <div className="col-lg-4 col-12 d-flex flex-column align-items-center justify content-center" style={{marginTop:"130px"}}>
           <h1 className={`${styles.pickn}`}>
-            Pick <span className="" style={{color:"#FFD600"}}>'n</span>
+            Pick <span className="" style={{color:"#FFD600"}}>&apos;n</span>
           </h1>
           <h1 className={`${styles.drop} ms-4 ms-lg-1`} style={{marginRight:"110px"}}>
             <span style={{color:"#FFD600"}}>Dr</span>op

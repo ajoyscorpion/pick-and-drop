@@ -7,7 +7,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { authContext } from '../../../context/authContext'
 import { signIn } from '../../../services/allAPIs'
 
-function signin() {
+function Signin() {
 
     const [email,setEmail] = useState('')
     const [pswd,setPswd] = useState('')
@@ -87,4 +87,4 @@ function signin() {
   )
 }
 
-export default signin
+export default Signin
