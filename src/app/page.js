@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <div className={`${styles.row} row`}>
         <div className="col-lg-2"></div>
-        <div className="col-lg-4 col-12 d-flex flex-column align-items-center justify content-center" style={{marginTop:"130px"}}>
+        <div className="col-lg-4 col-12 d-flex flex-column align-items-center justify content-center" style={{marginTop:"130px",marginBottom:"0px"}}>
           <h1 className={`${styles.pickn}`}>
             Pick <span className="" style={{color:"#FFD600"}}>&apos;n</span>
           </h1>
@@ -61,7 +61,18 @@ export default function Home() {
             <span style={{color:"#FFD600"}}>Dr</span>op
           </h1>
         </div>
-        <div className="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+        <div className="col-lg-4 ms-lg-5 d-flex flex-column justify-content-center align-items-center">
+          <h2 className="mt-lg-5 opacity-75">
+            <strong>"Your Route to Convenience!"</strong>
+          </h2>
+          <div>
+            <p className="ms-lg-3 mt-lg-4 ms-5 me-5 opacity-75">
+              <strong>
+                Pick & Drop offers seamless transportation solutions, simplifying your journey from point A to B with efficiency and reliability. 
+                Whether it's a quick ride or a package delivery, we've got you covered every step of the way.
+              </strong>
+            </p>
+          </div>
           <div 
             type='button'
             onClick={clickedConfirm}
