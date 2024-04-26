@@ -63,13 +63,13 @@ export default function Home() {
         </div>
         <div className="col-lg-4 ms-lg-5 d-flex flex-column justify-content-center align-items-center">
           <h2 className="mt-lg-5 opacity-75">
-            <strong>"Your Route to Convenience!"</strong>
+            <strong>&quot;Your Route to Convenience!&quot;</strong>
           </h2>
           <div>
             <p className="ms-lg-3 mt-lg-4 ms-5 me-5 opacity-75">
               <strong>
                 Pick & Drop offers seamless transportation solutions, simplifying your journey from point A to B with efficiency and reliability. 
-                Whether it's a quick ride or a package delivery, we've got you covered every step of the way.
+                Whether it&apos;s a quick ride or a package delivery, we&apos;ve got you covered every step of the way.
               </strong>
             </p>
           </div>
